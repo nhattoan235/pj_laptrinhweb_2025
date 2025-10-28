@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatBan", "DatBan.csproj", "{E356C9CA-A140-4961-97F9-D5BEC5AE799B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhanVienQL", "..\NhanVienQL\NhanVienQL.csproj", "{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E356C9CA-A140-4961-97F9-D5BEC5AE799B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E356C9CA-A140-4961-97F9-D5BEC5AE799B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E356C9CA-A140-4961-97F9-D5BEC5AE799B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E356C9CA-A140-4961-97F9-D5BEC5AE799B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F4D4B27-7914-4BA9-A726-87843757E7BA}
+	EndGlobalSection
+EndGlobal
