@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+}
+<section id="hero" class="hero section dark-background">
+
+    <div class="hero-background">
+        <video autoplay muted loop playsinline>
+            <source src="@Url.Content("~/assets/img/restaurant/video-4.mp4")" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                    <span class="tagline">Welcome Back, Staff</span>
+                    <h1 class="hero-title">Employee Access Portal</h1>
+                    <p class="hero-description">Đăng nhập để truy cập bảng điều khiển nhân viên, quản lý bàn ăn, món ăn và đơn đặt hàng.</p>
+
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#banan" class="btn btn-primary">Vào trang nhân viên</a>
+                        <a href="#contact" class="btn btn-outline">Liên hệ quản lý</a>
+                    </div>
+
+                    <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-item">
+                            <i class="bi bi-clock"></i>
+                            <div class="feature-text">
+                                <span class="label">Giờ làm việc</span>
+                                <span class="value">7:00 AM - 11:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="feature-text">
+                                <span class="label">Địa điểm</span>
+                                <span class="value">Nhà hàng Platia - Quận 1</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-telephone"></i>
+                            <div class="feature-text">
+                                <span class="label">Hỗ trợ</span>
+                                <span class="value">+84 123 456 789</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM ĐĂNG NHẬP NHÂN VIÊN -->
+            <div class="col-lg-4">
+                <div class="booking-card" data-aos="fade-left" data-aos-delay="200">
+                    <h3>Đăng nhập nhân viên</h3>
+                    <form action="@Url.Action("Index","Home")" method="post" >
+                        <div class="row gy-3">
+                            <div class="col-12">
+                                <input type="text" name="employeeId" class="form-control" placeholder="Mã nhân viên" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="col-12 text-end">
+                                <a href="#" class="small text-light text-decoration-underline">Quên mật khẩu?</a>
+                            </div>
+                            <div class="col-12">
+                              
+                                    <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+        <div class="scroll-text">Scroll to Explore</div>
+        <div class="scroll-arrow">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </div>
+
+</section>
+
+

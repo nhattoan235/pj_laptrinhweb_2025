@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<!-- Employee Dashboard Extension -->
+<section id="employee-dashboard" class="section light-background">
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row">
+            <!-- Sidebar Menu -->
+
+            @Html.Partial("_SidebarNhanVien")
+
+            <!-- Main Dashboard -->
+            <div class="col-md-9 col-lg-10 p-4">
+
+           
+                <!-- 3. Quản lý món ăn -->
+                <div id="monan" class="mb-5">
+                    <div class="section-title text-center mb-4">
+                        <span class="description-title">Menu Control</span>
+                        <h2>Quản lý món ăn</h2>
+                        <p>Thêm, sửa, xóa hoặc cập nhật tình trạng món ăn</p>
+                    </div>
+
+                    <div class="d-flex justify-content-end mb-3">
+                        <button class="btn btn-success"><i class="bi bi-plus-circle"></i> Thêm món</button>
+                    </div>
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead class="table-warning">
+                            <tr>
+                                <th>Mã món</th>
+                                <th>Tên món</th>
+                                <th>Giá</th>
+                                <th>Tình trạng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M01</td>
+                                <td>Phở bò</td>
+                                <td>45.000₫</td>
+                                <td><span class="badge bg-success">Còn</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary">Sửa</button>
+                                    <button class="btn btn-sm btn-outline-danger">Xóa</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+
+    .table-box {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+        .table-box:hover {
+            transform: scale(1.1);
+        }
+
+    .section-title h2 {
+        font-weight: 700;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh; /* Chiều cao bằng toàn màn hình */
+        width: 220px; /* Đặt chiều rộng cố định */
+        overflow-y: auto; /* Nếu danh sách dài có thể cuộn trong menu */
+        background-color: #212529; /* Màu nền tối */
+        padding: 20px;
+        z-index: 1000; /* Đảm bảo nằm trên các thành phần khác */
+    }
+
+    /* Để phần nội dung chính không bị che */
+    .col-md-9.col-lg-10.p-4 {
+        margin-left: 220px;
+    }
+
+    /* Giữ hiệu ứng hover */
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+</style>
+
+

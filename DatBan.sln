@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatBan", "DatBan.csproj", "{E356C9CA-A140-4961-97F9-D5BEC5AE799B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhanVienQL", "..\NhanVienQL\NhanVienQL.csproj", "{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhanVienQL", "NhanVienQL\NhanVienQL.csproj", "{7E71B1AD-8E11-40FB-B0DC-3909D77A8655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

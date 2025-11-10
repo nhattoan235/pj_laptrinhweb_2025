@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<!-- Employee Dashboard Extension -->
+<section id="employee-dashboard" class="section light-background">
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row">
+            <!-- Sidebar Menu -->
+
+            @Html.Partial("_SidebarNhanVien")
+
+            <!-- Main Dashboard -->
+            <div class="col-md-9 col-lg-10 p-4">
+
+                
+
+                <!-- 4. Đơn đặt món -->
+                <div id="donhang" class="mb-5">
+                    <div class="section-title text-center mb-4">
+                        <h2>Đơn đặt / Gọi món</h2>
+                        <p>Theo dõi các đơn hàng khách đang phục vụ</p>
+                    </div>
+                    <table class="table table-striped align-middle">
+                        <thead class="table-info">
+                            <tr>
+                                <th>Mã đơn</th>
+                                <th>Bàn</th>
+                                <th>Khách hàng</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>D01</td>
+                                <td>B01</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>220.000₫</td>
+                                <td><span class="badge bg-warning text-dark">Đang phục vụ</span></td>
+                                <td><button class="btn btn-sm btn-outline-primary">Chi tiết</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+
+    .table-box {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+        .table-box:hover {
+            transform: scale(1.1);
+        }
+
+    .section-title h2 {
+        font-weight: 700;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh; /* Chiều cao bằng toàn màn hình */
+        width: 220px; /* Đặt chiều rộng cố định */
+        overflow-y: auto; /* Nếu danh sách dài có thể cuộn trong menu */
+        background-color: #212529; /* Màu nền tối */
+        padding: 20px;
+        z-index: 1000; /* Đảm bảo nằm trên các thành phần khác */
+    }
+
+    /* Để phần nội dung chính không bị che */
+    .col-md-9.col-lg-10.p-4 {
+        margin-left: 220px;
+    }
+
+    /* Giữ hiệu ứng hover */
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+</style>
+
+

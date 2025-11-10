@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "QLBanAn";
+
+}
+
+<!-- Employee Dashboard Extension -->
+<section id="employee-dashboard" class="section light-background">
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row">
+            <!-- Sidebar Menu -->
+
+            @Html.Partial("_SidebarNhanVien")
+
+            <!-- Main Dashboard -->
+            <div class="col-md-9 col-lg-10 p-4">
+
+                <!-- 1. Dashboard -->
+                
+
+                <!-- 2. Quản lý bàn ăn -->
+                <!-- 2. Quản lý bàn ăn -->
+                <div id="banan" class="mb-5">
+                    <div class="section-title text-center mb-4">
+                        <span class="description-title">Employee Tools</span>
+                        <h2>Quản lý bàn ăn</h2>
+                        <p>Danh sách bàn, thông tin khách và sơ đồ bố trí</p>
+                    </div>
+
+                    <!-- Nút thêm bàn -->
+                    <div class="d-flex justify-content-end mb-3">
+                        <button class="btn btn-success"><i class="bi bi-plus-circle"></i> Thêm bàn</button>
+                    </div>
+
+                    <!-- Bảng danh sách bàn -->
+                    <table class="table table-bordered align-middle text-center">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Mã bàn</th>
+                                <th>Vị trí</th>
+                                <th>Số ghế</th>
+                                <th>Tình trạng</th>
+                                <th>Khách hàng hiện tại</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B01</td>
+                                <td>Khu A - Gần cửa sổ</td>
+                                <td>4</td>
+                                <td><span class="badge bg-success">Đang phục vụ</span></td>
+                                <td>Nguyễn Văn A</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#chitietBanModal"><i class="bi bi-eye"></i> Chi tiết</button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i> Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B02</td>
+                                <td>Khu B - Gần quầy bar</td>
+                                <td>2</td>
+                                <td><span class="badge bg-secondary">Trống</span></td>
+                                <td>-</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary" disabled><i class="bi bi-eye"></i> Chi tiết</button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i> Xóa</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Chi tiết bàn -->
+                    <div class="modal fade" id="chitietBanModal" tabindex="-1" aria-labelledby="chitietBanModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="chitietBanModalLabel"><i class="bi bi-table"></i> Chi tiết bàn B01</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h6 class="fw-bold mb-3">Thông tin bàn</h6>
+                                    <ul class="list-group mb-4">
+                                        <li class="list-group-item"><strong>Mã bàn:</strong> B01</li>
+                                        <li class="list-group-item"><strong>Vị trí:</strong> Khu A - Gần cửa sổ</li>
+                                        <li class="list-group-item"><strong>Số ghế:</strong> 4</li>
+                                        <li class="list-group-item"><strong>Tình trạng:</strong> Đang phục vụ</li>
+                                    </ul>
+
+                                    <h6 class="fw-bold mb-3">Thông tin khách hàng</h6>
+                                    <ul class="list-group mb-4">
+                                        <li class="list-group-item"><strong>Tên khách:</strong> Nguyễn Văn A</li>
+                                        <li class="list-group-item"><strong>Số điện thoại:</strong> 0901234567</li>
+                                        <li class="list-group-item"><strong>Giờ đặt:</strong> 11:15 - 26/10/2025</li>
+                                    </ul>
+
+                                    <h6 class="fw-bold mb-3">Danh sách món đang phục vụ</h6>
+                                    <table class="table table-sm table-striped">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Tên món</th>
+                                                <th>Số lượng</th>
+                                                <th>Ghi chú</th>
+                                                <th>Thao tác</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Phở bò</td>
+                                                <td>2</td>
+                                                <td>Ít hành</td>
+                                                <td><button class="btn btn-sm btn-outline-secondary">Sửa</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bánh cuốn</td>
+                                                <td>1</td>
+                                                <td>Không chả</td>
+                                                <td><button class="btn btn-sm btn-outline-secondary">Sửa</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h6 class="fw-bold mb-3 mt-4">Phản hồi khách hàng</h6>
+                                    <div class="alert alert-success mb-0">
+                                        “Đồ ăn rất ngon, phục vụ nhanh!” — <strong>Nguyễn Văn A</strong>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary"><i class="bi bi-save"></i> Lưu thay đổi</button>
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+              
+</section>
+
+<style>
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+
+    .table-box {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+        .table-box:hover {
+            transform: scale(1.1);
+        }
+
+    .section-title h2 {
+        font-weight: 700;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh; /* Chiều cao bằng toàn màn hình */
+        width: 220px; /* Đặt chiều rộng cố định */
+        overflow-y: auto; /* Nếu danh sách dài có thể cuộn trong menu */
+        background-color: #212529; /* Màu nền tối */
+        padding: 20px;
+        z-index: 1000; /* Đảm bảo nằm trên các thành phần khác */
+    }
+
+    /* Để phần nội dung chính không bị che */
+    .col-md-9.col-lg-10.p-4 {
+        margin-left: 220px;
+    }
+
+    /* Giữ hiệu ứng hover */
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        border-radius: 6px;
+    }
+</style>
+
+

@@ -1,0 +1,41 @@
+﻿@* Views/Shared/_SidebarNhanVien.cshtml *@
+<div class="col-md-3 col-lg-2 bg-dark text-white p-4 sidebar rounded-end">
+    <h4 class="text-center mb-4 text-white">Nhân viên</h4>
+    <ul class="nav flex-column">
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white active" href="@Url.Action("Index","Home")">
+                <i class="bi bi-speedometer2"></i> Trang chủ
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("QLBanAn","QuanLy")">
+                <i class="bi bi-table"></i> Quản lý bàn ăn
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("QLMonAn","QuanLy")">
+                <i class="bi bi-egg-fried"></i> Quản lý món ăn
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("GoiMon","QuanLy")">
+                <i class="bi bi-receipt"></i> Đơn đặt / Gọi món
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("PhanHoi","QuanLy")">
+                <i class="bi bi-chat-dots"></i> Phản hồi khách hàng
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("HoSo","QuanLy")">
+                <i class="bi bi-person-badge"></i> Hồ sơ cá nhân
+            </a>
+        </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link text-white" href="@Url.Action("DangNhap","Home")">
+                <i class="bi bi-box-arrow-right"></i> Đăng xuất
+            </a>
+        </li>
+    </ul>
+</div>
